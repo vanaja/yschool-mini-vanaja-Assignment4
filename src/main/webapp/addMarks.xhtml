@@ -31,7 +31,8 @@
                     </h:selectOneMenu>        
                     <br/><br/>
                     <h:outputText value="Subject Marks :"/>
-                    <h:inputText id="subjectmarks" size="5" value="#{marksManagedBean.insertedMarks.studentMarks}" required="true" requiredMessage="Validation Error: Value is required!" />
+                    <h:inputText id="subjectmarks" size="5" value="#{marksManagedBean.insertedMarks.studentMarks}" required="true" requiredMessage="Validation Error: Value is required!" >
+                    <f:validateLongRange minimum="0" maximum="100" /></h:inputText>
                     <h:message for="subjectmarks" errorStyle="color: red;" infoStyle="color: green;" />
                     <br/>
             </h:panelGrid>
