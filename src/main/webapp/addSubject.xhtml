@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>yschool-mini-vanaja</title>
+    </h:head>
+    <h:body>
+       <h:form>
+            <h:commandLink value="Home" action="index" immediate="true"/>
+            <h:outputText value="&#160;"/>
+            <br/>
+            <center>
+            <h1>Subject Register</h1>
+            <h:message for="#{null}" infoStyle="color: green;" errorStyle="color: red;" />
+            <h:panelGrid columns="3" > 
+                <h:outputText value="Subject Id"/>
+                <h:inputText id="id" value="#{subjectManagedBean.insertedSubject.subjectId}" required="true" label="Id" />
+                <h:message for="id" errorStyle="color: red;" infoStyle="color: green;" />
+
+                <h:outputText value="Subject Name"/>
+                <h:inputText id="name" value="#{subjectManagedBean.insertedSubject.subjectName}" required="true" label="Name" />
+                <h:message for="name" errorStyle="color: red;" infoStyle="color: green;" />
+
+            </h:panelGrid>
+
+            <h:commandButton value="Add Subject" actionListener="#{subjectManagedBean.addSubject()}"/>
+            <h:commandButton value="Reset" type="reset"/>
+            </center>
+    </h:form>
+   </h:body>
+</html>
+
