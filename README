@@ -1,2 +1,16 @@
 This project is developed for Java Crash Course Thia ia on Web Programming conducted by Yarl IT Hub Comminity.
 Thia ia for Assignment 4 senario 3.
+
+Main Technologies
+-----------------
+Programming language  : Java 1.7
+DB  		: MySQL Community Server 5.5.20
+Build Tool		: Maven 3.0.4
+
+How to run this project
+------------------------
+1. Download this project
+2. Go to the project folder
+3. Run following commans
+    mvn compile
+    mvn jetty:run
